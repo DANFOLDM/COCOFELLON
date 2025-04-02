@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location-Based Deals & Offers</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="location-based-deals.css">
+</head>
+<body>
+    <!-- Sliding Text Section -->
+    <div class="sliding-text-section">
+        <div class="sliding-text-container">
+            <span class="sliding-text">With these changes, the page should have a visually appealing, blended background gradient, soft edges on the navigation bar, reduced text size, and animations to give it a "wow" effect. If you need further adjustments or have any questions, feel free to ask!
+                 slides from left to right, similar to a headline or news ticker.</span>
+        </div>
+    </div>
+
+    <!-- Side Navigation Bar -->
+    <nav class="side-nav">
+        <ul>
+            <li><a href="file:///C:/Users/CANDY/Desktop/money%20home/moneyYo.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="floating-slideshow-container">
+                <div class="floating-slideshow">
+                    <img src="save the bucks.jpg" alt="Image 1">
+                    <img src="Traveling.jpg" alt="Image 2">
+                    <img src="cheaper_flights.jpg" alt="Image 3">
+                </div>
+            </div>
+            <div class="hero-map" data-aos="zoom-in">
+                <div id="map" style="height: 50vh;"></div>
+            </div>
+        </div>
+
+        <!-- Deals Section -->
+        <section class="deals-section" data-aos="fade-up">
+            <h2>Nearby Deals</h2>
+            <div class="deals-container">
+                <!-- Dynamic deal cards will load here -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" data-aos="fade-up">
+            <p>&copy; 2024 Smart Savings. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+    <script src="location-based-deals.js"></script>
+</body>
+</html>

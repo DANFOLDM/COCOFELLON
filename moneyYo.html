@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCO-FELLON</title>
+    <link rel="stylesheet" href="moneyYo.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="navbar">
+            <a href="#" class="logo">
+                <img src="CANDIT-logos_black-more.png" alt="App Logo">
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+            
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="main-content">
+        <section class="hero-section">
+            <!-- Slideshow Images -->
+            <div class="slide" style="background-image: url('motherhood_blog.webp');"></div>
+            <div class="slide" style="background-image: url('pregnant-women.jpg');"></div>
+            <div class="slide" style="background-image: url('Ways-to-Connect-with-Your-Newborn-Aug1.jpg');"></div>
+            <div class="slide" style="background-image: url('newborn-activities-hero-shutterstock_1942905280.png');"></div>
+            <div class="slide" style="background-image: url('couple-holding-their-newborn-baby-first-time-with-tears-joy-their-eyes-soft_1279788-16479.jpg');"></div>
+            <div class="slide" style="background-image: url('143702_iStock-1070353374.jpg_ce612578-7517-4188-aba6-ec06919d44f6.jpg');"></div>
+
+            <!-- Hero Text -->
+            <div class="hero-text">
+                <h1>USALAMA Wako, KIBAO kwetu</h1>
+                <p><h2>New Borns are A Gift’ And so is You.<h2><br>
+                     Know your state, live safe, Bring life!</p>
+                <button class="main-button">Learn More</button>
+            </div>
+
+            <!-- Floating Login/Sign-Up Form -->
+            <div class="floating-form">
+                <div class="form-container">
+                    <!-- Login Form -->
+                    <form id="login-form" class="form active">
+                        <h3>Login</h3>
+                        <input type="email" placeholder="Email" required />
+                        <input type="password" placeholder="Password" required />
+                        <button type="submit">Login</button>
+                        <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+                    </form>
+
+                    <!-- Sign-Up Form -->
+                    <form id="signup-form" class="form">
+                        <h3>Sign Up</h3>
+                        <input type="text" placeholder="Full Name" required />
+                        <input type="email" placeholder="Email" required />
+                        <input type="password" placeholder="Password" required />
+                        <button type="submit">Sign Up</button>
+                        <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!-- Features Section -->
+<section class="features" id="features">
+    <div class="feature-box" onclick="window.location.href='http://localhost:8502/'">
+        <i class="fas fa-tags"></i>
+        <h2>DOCTOR</h2>
+        <p>Talk to your personal Doc</p>
+    </div>
+    <div class="feature-box" onclick="window.location.href='file:///C:/Users/user/Desktop/COCO%20FELLON/MOM%20TIPS/momtips.html'">
+        <i class="fas fa-lightbulb"></i>
+        <h2>MOM TIPS</h2>
+        <p>Expert advice on pregnancy, nutrition & self-care.</p>
+    </div>
+    <div class="feature-box" onclick="window.location.href='file:///C:/Users/user/Desktop/COCO%20FELLON/MOM%20community/com.html'">
+        <i class="fas fa-users"></i>
+        <h2>MOM COMMUNITY</h2>
+        <p>Connect with other moms, share experiences & get support.</p>
+    </div>
+    <div class="feature-box" onclick="window.location.href='file:///C:/Users/user/Desktop/COCO%20FELLON/Health/health.html'">
+        <i class="fas fa-bell"></i>
+        <h2>HEALTH REMINDERS</h2>
+        <p>Stay updated on doctor appointments, milestones & health tips.</p>
+    </div>
+    <div class="feature-box" onclick="window.location.href='file:///C:/Users/user/Desktop/COCO%20FELLON/ME/dashboard.html'">
+        <i class="fas fa-bullseye"></i>
+        <h2>POST BIRTH GOALS</h2>
+        <p>Track your journey, set wellness goals & celebrate milestones.</p>
+    </div>
+</section>
+
+
+    <!-- Login Popup -->
+    <div id="loginPopup" class="login-popup">
+        <div class="login-content">
+            <span id="closePopup" class="close-btn">&times;</span>
+            <div class="login-tabs">
+                <button class="tab active">Personal</button>
+                <button class="tab">Business</button>
+                <button class="tab">Other</button>
+            </div>
+            <form class="login-form">
+                <label for="userId">User ID</label>
+                <input type="text" id="userId" name="userId" required>
+                <button type="submit" class="popup-login-btn">LOG IN</button>
+            </form>
+            <div class="login-links">
+                <a href="#">Can't Log In?</a>
+                <a href="#">Enroll in Online Banking</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="moneyYo.js"></script>
+</body>
+</html>

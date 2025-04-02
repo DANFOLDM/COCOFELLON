@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Money-Saving Tips</title>
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Tips</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Map -->
+    <div id="map-container" class="animate__animated animate__fadeInLeft">
+      <div id="map"></div>
+    </div>
+
+    <!-- Tip Submission Form -->
+    <div id="tip-form-container" class="animate__animated animate__fadeInRight">
+      <h3>Share a Money-Saving Tip <i class="fas fa-lightbulb"></i></h3>
+      <form id="tip-form">
+        <label for="tip-title">Tip Title:</label>
+        <input type="text" id="tip-title" placeholder="e.g., Discount on Electronics" required />
+
+        <label for="tip-content">Tip Details:</label>
+        <textarea id="tip-content" placeholder="Describe the tip in detail..." required></textarea>
+
+        <label for="location">Location (Click on the map):</label>
+        <input type="text" id="location" name="location" readonly required>
+
+        <button type="submit">Submit Tip <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Tips Carousel -->
+  <div id="tip-carousel" class="animate__animated animate__fadeInUp"></div>
+
+  <!-- Community Reviews -->
+  <div id="community-section" class="animate__animated animate__fadeInUp">
+    <h2>Community Reviews <i class="fas fa-comments"></i></h2>
+    <div id="community-grid"></div>
+  </div>
+
+  <!-- Floating Icons -->
+  <div class="floating-icons">
+    <i class="fas fa-coins"></i>
+    <i class="fas fa-money-bill-wave"></i>
+    <i class="fas fa-piggy-bank"></i>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="form.js" defer></script>
+</body>
+</html>

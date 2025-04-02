@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Reminders - Jane Doe</title>
+    <link rel="stylesheet" href="health.css">
+    <script src="health.js" defer></script>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>HEALTH REMINDERS</h1>
+        <p>Stay on top of postpartum care, baby milestones, and self-care.</p>
+    </section>
+
+    <!-- Reminder Section -->
+    <section class="reminders">
+        <h2>Upcoming Reminders 📆</h2>
+
+        <div class="reminder-card">
+            <h3>👶 Baby's First Checkup</h3>
+            <p>Jane, don't forget your newborn's first pediatrician visit on <b>April 5, 2025</b>.</p>
+        </div>
+
+        <div class="reminder-card">
+            <h3>🩺 Postpartum Recovery Check</h3>
+            <p>Your 6-week postpartum checkup is scheduled for <b>April 10, 2025</b>. Take care of yourself, mama! ❤️</p>
+        </div>
+
+        <div class="reminder-card">
+            <h3>💊 Iron & Vitamin Supplements</h3>
+            <p>It's time to take your postnatal vitamins! Staying strong for you and your baby is key. 🌿💪</p>
+        </div>
+
+        <div class="reminder-card">
+            <h3>🍼 Breastfeeding Hydration</h3>
+            <p>Reminder: Drink 2-3 liters of water daily to support breastfeeding and hydration. 💧</p>
+        </div>
+
+        <div class="reminder-card">
+            <h3>🧘‍♀️ Mental Health Check</h3>
+            <p>You're doing amazing, Jane! Take 10 minutes today to breathe, stretch, or just relax. 🕯️✨</p>
+        </div>
+    </section>
+
+    <!-- Daily Health Tips -->
+    <section class="daily-tips">
+        <h2>💡 Daily Health Tips</h2>
+        <div class="tip-container">
+            <p id="dailyTip">Loading health tips...</p>
+        </div>
+    </section>
+
+    <!-- Reminder Calendar -->
+    <section class="calendar-section">
+        <h2>📅 Add Your Own Reminders</h2>
+        <input type="date" id="reminderDate">
+        <input type="text" id="reminderText" placeholder="Enter your reminder...">
+        <button onclick="addReminder()">Add Reminder</button>
+
+        <div id="customReminders"></div>
+    </section>
+
+    <!-- Encouragement & Motivation -->
+    <section class="motivation">
+        <h2>💖 A Note for You, Jane</h2>
+        <p>"Motherhood is a journey. Some days are tough, but you're tougher. Keep going, one step at a time." 🌸</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Stay strong, Jane! You're never alone in this journey. 💕</p>
+    </footer>
+
+</body>
+</html>

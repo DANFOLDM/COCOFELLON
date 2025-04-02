@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom Tips - Learn & Grow</title>
+    <link rel="stylesheet" href="momtips.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>💖 Welcome to Mom Tips 💖</h1>
+        <p>Your guide to a **healthy, happy motherhood!**</p>
+        <p id="quote"></p>  <!-- Motivational quote will appear here -->
+    </header>
+
+    <!-- Search Box -->
+    <div class="search-container">
+        <input type="text" id="searchBox" placeholder="🔍 Search for tips..." onkeyup="searchTips()">
+    </div>
+
+    <!-- Tips Section -->
+    <section class="tips">
+        <h2>💡 Motherhood Wisdom</h2>
+
+        <div class="category">
+            <h3>🍼 Newborn Baby Care</h3>
+            <div class="tip-bubble" onclick="toggleTip(this)">👶 Keep skin-to-skin contact to bond with your newborn.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">🛁 Give your baby a **gentle sponge bath** until the umbilical cord falls off.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">🌡️ Always **test bathwater temperature** before putting the baby in.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">🩺 **Regular check-ups** help monitor your baby's health.</div>
+        </div>
+
+        <div class="category">
+            <h3>🗣 Talking & Bonding with Your Baby</h3>
+            <div class="tip-bubble" onclick="toggleTip(this)">🎵 Sing lullabies & talk to your baby often – it helps **language development**.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">👀 Maintain **eye contact** while speaking to build trust.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">📖 Read simple storybooks even if your baby is **too young to understand**.</div>
+        </div>
+
+        <div class="category">
+            <h3>🌿 Mom’s Self-Care</h3>
+            <div class="tip-bubble" onclick="toggleTip(this)">💤 Sleep whenever your baby sleeps – rest is important for **your health**.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">💧 Stay **hydrated** and eat nutritious meals to maintain energy.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">🧘 Take **10 minutes daily** to breathe, stretch, or meditate.</div>
+        </div>
+
+        <div class="category">
+            <h3>🥗 Nutrition for Mom & Baby</h3>
+            <div class="tip-bubble" onclick="toggleTip(this)">🍏 Eat a **balanced diet** rich in iron, calcium, and vitamins.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">🥕 Introduce solid foods at **6 months**, one ingredient at a time.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">🍉 **Breastfeeding?** Stay hydrated & eat enough calories.</div>
+        </div>
+
+        <div class="category">
+            <h3>🧠 Mental Health & Emotional Well-being</h3>
+            <div class="tip-bubble" onclick="toggleTip(this)">❤️ **You are doing great!** Don't compare yourself to others.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">📞 Talk to a **friend, partner, or therapist** if you're feeling overwhelmed.</div>
+            <div class="tip-bubble" onclick="toggleTip(this)">🚶‍♀️ Daily walks help **reduce stress** & boost energy.</div>
+        </div>
+
+    </section>
+
+    <script src="momtips.js"></script>
+</body>
+</html>

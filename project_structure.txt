@@ -1,0 +1,51 @@
+Folder PATH listing
+Volume serial number is 5A21-4436
+C:.
+¦   CANDIT-logos_black-more.png
+¦   CATCHING FLIGHTS.jpg
+¦   cheaper_flights.jpg
+¦   DOME2.webp
+¦   DOME3.webp
+¦   friends-cookiN.jpg
+¦   full-shot.jpg
+¦   high-angle.jpg
+¦   medium-shoT.jpg
+¦   money-home-page.webp
+¦   moneyYo.css
+¦   moneyYo.html
+¦   moneyYo.js
+¦   project_structure.txt
+¦   save the bucks.jpg
+¦   side-view2.jpg
+¦   
++---community form
+¦       form.css
+¦       form.html
+¦       form.js
+¦       
++---DEALS
+¦       cheaper_flights.jpg
+¦       DOME2.webp
+¦       DOME3.webp
+¦       Financial-Planning.webp
+¦       friends-cookiN.jpg
+¦       full-shot-travel-concept-with-la.jpg
+¦       images.jfif
+¦       location-based-deals.css
+¦       location-based-deals.js
+¦       locations-based-deals.html
+¦       medium-shoT.jpg
+¦       save the bucks.jpg
+¦       Traveling.jpg
+¦       Why-Travel-Is-Not-For-Everyone.jpg
+¦       
++---NOTIFICATIONS
+¦       notifications.css
+¦       notifications.html
+¦       notifications.js
+¦       
++---TIPS
+        tips.css
+        tips.html
+        tips.js
+        

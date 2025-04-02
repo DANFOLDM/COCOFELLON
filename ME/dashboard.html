@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰ Menu</button>
+
+    <div class="dashboard-container">
+        <!-- Sidebar with Close Button -->
+        <aside class="sidebar" id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">❌</button>
+            <h2>Personalized Info</h2>
+            <p><strong>Name:</strong> <span id="userName">Jane Doe</span></p>
+            <p><strong>Age:</strong> <span id="userAge">27</span></p>
+            <p><strong>LMP:</strong> <span id="userLMP">2024-01-01</span></p>
+            <p><strong>Pre-existing Conditions:</strong> None</p>
+            <p><strong>Dietary Preferences:</strong> Balanced Diet</p>
+            <p><strong>Contact for SMS Updates:</strong> +254712345678</p>
+            <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-bubble">
+                <h2>Welcome, <span id="dashboardName">Jane</span>!</h2>
+                <p id="pregnancyStage">Calculating your pregnancy stage...</p>
+            </div>
+
+            <div class="content-bubble">
+                <h3>Baby Development</h3>
+                <p id="babyDevelopment">Loading...</p>
+            </div>
+
+            <div class="content-bubble">
+                <h3>Nutrition Tips</h3>
+                <p id="nutritionTips">Loading...</p>
+            </div>
+
+            <div class="content-bubble">
+                <h3>Checkup Reminders</h3>
+                <p id="checkupReminders">Loading...</p>
+            </div>
+
+            <div class="content-bubble">
+                <h3>Pregnancy Progress</h3>
+                <canvas id="healthGraph"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

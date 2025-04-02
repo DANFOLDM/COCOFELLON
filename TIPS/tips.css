@@ -1,0 +1,265 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f0f9ff, #ffffff);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Floating Navigation */
+.floating-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.floating-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.floating-nav ul li {
+    margin: 0 1rem;
+}
+
+.floating-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.floating-nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('https://source.unsplash.com/1920x1080/?city,night') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.cta-button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(255, 152, 0, 0.6);
+}
+
+/* Floating Cards */
+.floating-cards {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.floating-card {
+    background: white;
+    color: #333;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: float 6s ease-in-out infinite;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Tip Cards */
+.tip-carousel {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.tip-card {
+    background: linear-gradient(45deg, #ff9800, #ffc107);
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tip-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: linear-gradient(45deg, #ff6f00, #ff9800);
+    box-shadow: 0 6px 10px rgba(255, 152, 0, 0.6);
+}
+
+/* Map Section */
+#map {
+    width: 90%;
+    height: 400px;
+    margin: 2rem auto;
+    border-radius: 20px;
+    border: 4px solid #0077b6;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.map-tooltip {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Community Section */
+.community-section {
+    background: url('https://source.unsplash.com/1920x1080/?community,people') no-repeat center center/cover;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.community-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Darker shade */
+    z-index: 1;
+}
+
+.community-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.community-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.community-card {
+    background: rgba(255, 255, 255, 0.8); /* Transparency */
+    color: #333;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.community-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.community-card i {
+    font-size: 2rem;
+    color: #ff9800;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.community-card strong {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.community-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.community-section h2,
+.community-card {
+    animation: fadeInUp 1s ease-out;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}

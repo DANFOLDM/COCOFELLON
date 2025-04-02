@@ -1,0 +1,393 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)); /* Subtle gradient background */
+}
+
+/* Sliding Text Section */
+.sliding-text-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1001; /* Ensure it appears above other content */
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.sliding-text-container {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliding-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: slide 40s linear infinite; /* Slower speed */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Side Navigation Bar */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: width 0.3s ease;
+    border-radius: 0 20px 20px 0; /* Soft edges */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.side-nav ul {
+    list-style: none;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.side-nav ul li {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.side-nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem; /* Reduced text size */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border-radius: 10px; /* Soft edges */
+}
+
+.side-nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.side-nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    transition: transform 0.3s ease;
+    transform-origin: right;
+    transform: scaleX(0);
+    border-radius: 10px; /* Soft edges */
+}
+
+.side-nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.side-nav ul li {
+    animation: slideIn 0.5s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.side-nav ul li:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.side-nav ul li:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.side-nav ul li:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 80px; /* Adjust for the width of the side nav */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: url('full-shot-travel-concept-with-la.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+.hero-section::before,
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid rgba(255, 255, 255, 0.5); /* Add a white border with transparency */
+    border-radius: 20px; /* Rounded corners */
+    pointer-events: none;
+}
+
+.hero-section::before {
+    border-color: rgba(255, 255, 255, 0.7); /* Slightly darker border */
+    z-index: 1;
+}
+
+.hero-section::after {
+    border-color: rgba(255, 255, 255, 0.3); /* Lighter border */
+    z-index: 2;
+}
+
+/* Floating Slideshow */
+.floating-slideshow-container {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 30%;
+    height: 50%;
+    overflow: hidden;
+    border-radius: 15px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    animation: float 4s infinite ease-in-out;
+    z-index: 2;
+}
+
+.floating-slideshow {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    animation: slideshow 6s infinite;
+}
+
+.floating-slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    border-radius: 15px;
+    transition: opacity 1s ease-in-out, transform 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.floating-slideshow img:first-child {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Map Section */
+.hero-map {
+    height: 100vh;
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    width: 50%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Deals Section */
+.deals-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f0f4f8;
+}
+
+.deals-section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.deals-section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #ff8800;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+.deals-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Deal Cards */
+.deal-card {
+    width: 250px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.deal-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.deal-content {
+    padding: 15px;
+}
+
+.deal-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #004aad;
+}
+
+.deal-content p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.deal-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+}
+
+.deal-buttons button {
+    border: none;
+    background: #ff8800;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.deal-buttons button:hover {
+    background: #ff5500;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    color: white;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .side-nav {
+        width: 60px;
+    }
+
+    .main-content {
+        margin-left: 60px;
+    }
+
+    .deals-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .deal-card {
+        width: 200px;
+    }
+
+    .deal-content h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .deals-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .deal-card {
+        width: 180px;
+    }
+}

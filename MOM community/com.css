@@ -1,0 +1,115 @@
+/* Background with a soft gradient */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #3a3a5a, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    background: url('pregnant-women.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    position: relative;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Experience Cards Section */
+.experiences {
+    padding: 40px;
+}
+
+.experience-card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat Section - Fixed Bottom Left */
+.chat-section {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 320px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.chat-section:hover {
+    transform: scale(1.02);
+}
+
+/* Chat Box */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Messages */
+#chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Chat Input */
+#chatInput {
+    width: 85%;
+    padding: 8px;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Send Button */
+button {
+    background: #f08ca3;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+    width: 15%;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #d85b7b;
+}
